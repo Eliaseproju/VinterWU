@@ -17,10 +17,6 @@ body {
 
 
 
-
-
-
-
 .header-div {
     grid-area:header; 
     border-bottom: 1px solid gray;
@@ -57,7 +53,8 @@ body {
     display: flex;
     align-items: center;
     flex-direction: row;
-    justify-content: center; /* temporary alignment */
+    align-content: start;
+    /* temporary alignment */
 
 }
 
@@ -66,27 +63,86 @@ body {
     padding: 6px;
     border: none;
     margin-right: 16px;
-    font-size: 17px;
-    background-color: rgba(234, 236, 235);
+    font-size: 16px;
+    background-color: rgb(232, 232, 223);
     border-radius: 18px;
+    width: 500px;
+    height: 1.9em;
+    font: 400 0.875rem/1.25rem -apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;
+    justify-content: center;
+    padding-left: 30px;
+  }
+
+  .nav-search-bar input[type=text]:focus {
+    outline-color: #FFC107;
+        
   }
 
 .nav-search-bar {
-
+    display: flex;
+    align-items: center;
 }
 
+.nav-search-bar svg {
+    position:absolute;
+    padding-left: 10px;
+}
+
+.nav-interactions {
+    justify-self: flex;
+    display: flex;
+    flex-direction: row;
+}
+
+.create-post-button {
+    display: flex;
+    flex-direction: row;
+}
 
 
 
 .section-div {
     grid-area:section;
     border-right: 1px solid gray;
+    padding-left: 1.8em;
+    padding-right: 3em;
 
 
 }
 
+.section-div {
+    overflow-y:scroll;
+    overflow-x:hidden;
+    scrollbar-color: red; /* Cant change color */
+}
 
 
+.section {
+    display: flex;
+    flex-direction: column;  /* Items inside each section are also vertical */
+    gap: 12px;               /* spacing between links */
+    margin-bottom: 24px;     /* space between sections */
+    padding-bottom: 16px;
+    border-bottom: 1px solid #e2e2e2;
+}
+
+.section a {
+    display: flex;
+    align-items: center;  /* for icons + text */
+    gap: 8px;
+    color: #222;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+.section a:hover {
+    background-color: #f3f5f6;
+    transition: background-color 0.15s ease;
+}
+
+.section:last-of-type {
+    border-bottom: none;
+  }
 
 .main-div {
     grid-area:main;
@@ -106,6 +162,8 @@ body {
 
 
 }
+
+
 
 
 
