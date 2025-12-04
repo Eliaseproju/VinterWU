@@ -50,12 +50,19 @@ body {
 .nav-div {
     grid-area:nav;
     border-bottom: 1px solid gray;
-    display: flex;
     align-items: center;
     flex-direction: row;
-    align-content: start;
+    display: grid;
+    grid-template-columns: 75.5% 24.5%;
+    grid-template-areas:
+    "search interactions";
     /* temporary alignment */
 
+}
+
+.nav-search-bar {
+    justify-self: center;
+    grid-area: search;
 }
 
 .nav-search-bar input[type=text] {
@@ -89,7 +96,8 @@ body {
 }
 
 .nav-interactions {
-    justify-self: flex;
+    grid-area: interactions;
+    justify-self: end;
     display: flex;
     flex-direction: row;
 }
