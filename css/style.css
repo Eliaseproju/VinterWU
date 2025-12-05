@@ -46,6 +46,9 @@ body {
     font-size: 160%;
 }
 
+.header-div a {
+    text-decoration: none;
+}
 
 .nav-div {
     grid-area:nav;
